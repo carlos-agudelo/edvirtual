@@ -1,0 +1,60 @@
+
+.h-full-img {
+	&,
+	img {
+		width: 100%;
+		height: 100%;
+	}
+	img {
+		object-fit: cover;
+	}
+	&--center {
+		img {
+			object-position: center;
+		}
+	}
+}
+
+.h-overlay {
+	position: relative;
+	&:before {
+		width: 100%;
+		height: 100%;
+		content: "";		
+		position: absolute;
+		left: 0;
+		top: 0;
+		opacity: 0.3;
+		background-color: $color-black-2;		
+	}
+}
+
+.color-black-2 {
+	color: $color-black-2;
+	@include on-event {
+		color: $color-black-2;
+	}
+}
+
+
+.color-yellow {
+	color: $color-yellow;
+	@include on-event {
+		color: $color-yellow;
+	}	
+}
+
+.border-0 {
+	border-radius: 0;
+}
+
+.b-bottom {
+	&__yellow {
+		border-bottom: solid 1px $color-yellow;
+	}
+}
+
+
+.max-w80 {
+	max-width: 80%;
+}

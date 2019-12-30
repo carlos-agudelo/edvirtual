@@ -1,0 +1,38 @@
+
+.c-link-pdf {
+	max-width: 300px;
+	width: 100%;
+	position: relative;
+	padding: 15px;
+	background-color: $color-black;
+	h5 {
+		color: $color-white;
+	}
+	img {
+		max-width: 50px;
+	}
+    @include on-event {
+		text-decoration: none;
+		h5 {
+			color: $color-yellow;
+		}
+    }
+	&::before {
+		position: absolute;
+		content: "";
+		left: 0;
+		bottom: 0;
+		width: 0;
+		opacity: 0;
+		height: 3px;
+		background-color: $color-primary;
+		transition: all 500ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	}    
+	&:hover {
+		&::before {
+		  width: 100%;
+		  opacity: 1;
+		  transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);       
+		}
+	} 	   	
+}

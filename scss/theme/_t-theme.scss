@@ -1,0 +1,112 @@
+
+/* -- COLORS -- */
+
+.text-primary {
+    color: $color-primary!important;
+    @include on-event {
+        color: $color-primary!important;
+    }    
+}
+
+/* -- FORMS -- */
+
+.form-control {
+	height: 46px;
+	border-radius: 0;
+	border-color: $color-white;
+	background-clip: unset;
+	&:focus {
+		border-color: $color-primary;
+		box-shadow: none;		
+	}
+}
+
+.custom-radio {
+    .custom-control-input:checked~.custom-control-label::before {
+        border-color: $color-black;
+        background-color: $color-yellow;
+    }
+    .custom-control-label {
+        &::before,
+        &::after {
+            top: 6px;
+        }
+    }
+}
+
+/* -- BTN -- */
+
+.btn {
+	@include font-size(18px, 20px);
+    border-radius: 0;
+    padding: 13px 24px 7px;
+	font-weight: 500;
+}
+
+button {
+    &.btn {
+        padding: 10px 24px 10px;
+    }
+}
+
+.btn-primary {
+    min-height: 46px;
+    color: $color-black-2;
+    background-color: $color-primary;
+    border: 0;
+    position: relative;
+    &::before {
+    	position: absolute;
+		content: "";
+		left: 0;
+		bottom: 0;
+		width: 0;
+		height: 1px;
+		opacity: 0;
+		background-color: $color-black-2;
+		transition: all 500ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+    &:hover {
+    	&::before {
+    		width: 100%;
+    		opacity: 1;
+			transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);    		
+    	}
+    }
+    @include on-event {
+        color: $color-black-2;
+        background-color: $color-primary;
+        box-shadow: none;
+    }    
+}
+
+/* -- LIST -- */
+
+.list-unstyled {
+    .media {
+        img {
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            object-position: top;
+        }
+        & + .media {
+            margin-top: 25px;
+            padding-top: 25px;            
+            border-top: solid 1px #e4e4e4;
+        }
+        &-body {
+            position: relative;
+            padding-right: 130px;
+            .btn {
+                min-width: 90px;
+                position: absolute;
+                right: 19px;
+                top: 22px;
+                .fa {
+                    vertical-align: -9%;
+                }
+            }
+        }
+    }
+}

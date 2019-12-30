@@ -1,0 +1,34 @@
+@charset 'UTF-8';
+
+// 0. Configuration and helpers
+@import
+	'abstracts/a-variables',
+	'abstracts/a-mixins',
+	'abstracts/a-helpers';
+
+// 1. Theme
+@import
+	'theme/t-theme';
+
+// 2. Layouts
+@import
+	'layout/l-base',
+	'layout/l-header',
+	'layout/l-footer';
+
+// 3. Menus
+/*@import
+	'menus/m-main';
+*/
+// 4. Components
+@import
+	'components/c-agrouped',
+	'components/c-video',
+	'components/c-pagination',
+	'components/c-link-pdf';
+
+// 5. Page-specific styles
+@import
+	'pages/p-base',
+	'pages/p-login',
+	'pages/p-index';

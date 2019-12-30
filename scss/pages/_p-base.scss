@@ -1,0 +1,34 @@
+
+.page {
+	&__header {
+		margin-bottom: 30px;
+		h2 {
+			margin-bottom: 0;
+			padding-bottom: 20px;
+			border-bottom: solid 1px #e4e4e4;
+		}
+		&--curse {
+			margin-bottom: 0;
+		}
+		&-img {
+			width: 100%;
+			height: 150px;		
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: center;
+			}
+		}
+	}
+	&-content {
+		min-height: 550px;
+		&__info {
+			height: 100%;
+		}
+		&__footer {
+		    border-top: 1px $color-yellow solid;
+			padding: 30px 15px 15px;		
+		}
+	}
+}
